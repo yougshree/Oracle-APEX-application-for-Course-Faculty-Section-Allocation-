@@ -1,0 +1,18 @@
+--------Ascending order of faculty_id
+SELECT * 
+FROM FACULTY
+ORDER BY faculty_id;
+
+-------Error
+-----Find duplicates by email addresses
+SELECT email, COUNT(*) 
+FROM FACULTY
+GROUP BY email
+HAVING COUNT(*) > 1;
+-----DELETE Duplicate table
+DELETE FROM FACULTY
+WHERE ROWID NOT IN (
+  SELECT MIN(ROWID)
+  FROM FACULTY
+  GROUP BY email
+);
