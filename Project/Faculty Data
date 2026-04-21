@@ -1,0 +1,75 @@
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('MHAK','Prof. Dr. Md. Mozammel Huq Azad Khan','Professor','mhakhan@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('DSHR','Prof. Dr. Shamim H. Ripon','Professor','dshr@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('NYA','Prof. Dr. Md. Nawab Yousuf Ali','Professor','nawab@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('DAWR','Dr. Ahmed Wasif Reza','Professor','wasif@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('TJ','Dr. Taskeed Jabid','Associate Professor','taskeed@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('MI','Dr. Maheen Islam','Associate Professor','maheen@ewubd.edu');
+
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('DMRH','Dr. Mohammad Rezwanul Huq','Associate Professor','mrhuq@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('MAR','Dr. Anisur Rahman','Associate Professor','anis@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('DMAZ','Dr. Mohammad Arifuzzaman','Associate Professor','mazaman@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('DAKP','Dr. Anup Kumar Paul','Associate Professor','anuppaul@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('SJ','Dr. Sarwar Jahan','Associate Professor','sjahan@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('DSU','Dr. Mohammad Salah Uddin','Associate Professor','uddin@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('MKR','Md. Mostofa Kamal Rasel','Assistant Professor','mostofa.kamal@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('MRAR','Dr. Mohammad Rifat Ahmmad Rashid','Assistant Professor','rifat.rashid@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('DMIM','Dr. Mohammad Manzurul Islam','Assistant Professor','md.manzurul.islam@gmail.com');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('DAHF','Dr. Md. Hasanul Ferdaus','Assistant Professor','hasanul.ferdaus@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('DAKC','Dr. Abdullahil Al Kafee Chowdhury','Assistant Professor','abdullahi.kafee@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('DHMAI','Dr. Hasan Mahmood Aminul Islam','Assistant Professor','mahmood.aminul@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('RDA','Rashedul Amin Tuhin','Senior Lecturer','mcctuhin@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('TM','Tanni Mittra','Senior Lecturer','tanni@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('SHK','M Saddam Hossain Khan','Senior Lecturer','saddam.cse@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('MKN','Musharrat Khan','Senior Lecturer','musharrat.khan@ewubd.edu');
+
+INSERT INTO FACULTY (initials, full_name, designation, email) 
+VALUES ('MDH','Mahamudul Hasan','Senior Lecturer','mahamudul@ewubd.edu');
+
+
+
+
+
+
