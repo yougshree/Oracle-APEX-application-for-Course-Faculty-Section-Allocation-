@@ -1,0 +1,43 @@
+1) FACULTY Table
+CREATE TABLE FACULTY (
+  faculty_id  NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  initials    VARCHAR2(10)  NOT NULL UNIQUE,
+  full_name   VARCHAR2(100) NOT NULL,
+  designation VARCHAR2(50),
+  email       VARCHAR2(100)
+);
+
+2) COURSE Table
+CREATE TABLE COURSE (
+  course_id    NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  course_code  VARCHAR2(10)  NOT NULL UNIQUE,
+  course_title VARCHAR2(150) NOT NULL,
+  credits      NUMBER(3,1)   NOT NULL,
+  course_type  VARCHAR2(10)
+);
+3) ROOM Table
+CREATE TABLE ROOM (
+  room_id    NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  room_name  VARCHAR2(60) NOT NULL UNIQUE,
+  room_type  VARCHAR2(30)
+);
+4) TIME_SLOT Table
+CREATE TABLE TIME_SLOT (
+  slot_id    NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  start_time VARCHAR2(8)  NOT NULL,
+  end_time   VARCHAR2(8)  NOT NULL,
+  day_combo  VARCHAR2(5)  NOT NULL,
+  UNIQUE (start_time, day_combo)
+);
+
+5) SECTION Table
+CREATE TABLE SECTION (
+  section_id  NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  course_id   NUMBER NOT NULL REFERENCES COURSE(course_id),
+  section_no  NUMBER NOT NULL,
+  faculty_id  NUMBER REFERENCES FACULTY(faculty_id),
+  slot_id     NUMBER REFERENCES TIME_SLOT(slot_id),
+  room_id     NUMBER REFERENCES ROOM(room_id),
+  semester    VARCHAR2(15) NOT NULL,
+  UNIQUE (course_id, section_no, semester)
+);
