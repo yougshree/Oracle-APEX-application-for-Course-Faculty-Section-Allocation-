@@ -16,3 +16,9 @@ WHERE ROWID NOT IN (
   FROM FACULTY
   GROUP BY email
 );
+
+-------checking whether course data has any duplicates
+SELECT course_code, COUNT(*)
+FROM COURSE
+GROUP BY course_code
+HAVING COUNT(*) > 1;
