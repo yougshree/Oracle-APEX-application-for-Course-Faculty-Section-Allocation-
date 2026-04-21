@@ -1,0 +1,142 @@
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE101','Introduction to Computers I',3,'OD');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE102','Introduction to Computers II',3,'OD');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE103','Structured Programming',4.5,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE106','Discrete Mathematics',3,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE110','Object Oriented Programming',4.5,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE200','Computer-Aided Engineering Drawing',1,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE207','Data Structures',4,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE209','Electrical Circuits',4,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE227','Numerical Methods and Computer Programming',4.5,'OD');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE246','Algorithms',4.5,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE251','Electronic Circuits',4,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE302','Database Systems',4.5,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE303','Statistics for Data Science',4,'MC');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE325','Operating Systems',4,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE345','Digital Logic Design',4,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE347','Information System Analysis and Design',4,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE350','Data Communications',4,'MC');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE360','Computer Architecture',3,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE366','Artificial Intelligence',4,'MC');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE405','Computer Networks',4,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE407','Green Computing',3,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE412','Software Engineering',4,'MC');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE420','Computer Graphics',4,'ME');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE430','Software Testing and Quality Assurance',4,'MC');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE432','Digital Signal Processing',4,'MC');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE438','Digital Image Processing',4,'ME');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE442','Microprocessor and Microcontroller',4,'MC');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE453','Wireless Networks',3,'ME');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE464','Advanced Database Systems',4,'ME');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE475','Machine Learning',4,'ME');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE477','Data Mining',4,'ME');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE479','Web Programming',4,'ME');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE487','Cyber Security, Ethics and Law',3,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE488','Big Data Analytics',4,'ME');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE489','Mobile Programming',4,'ME');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('CSE495','IT Project Management and Entrepreneurship',3,'Core');
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('ICE216','Signals and Systems',3,NULL);
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('ICE310','Electromagnetic Theory',3,NULL);
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('ICE313','Microprocessors and Interfacing',4,NULL);
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('ICE314','Digital Communications',4,NULL);
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('ICE370','Applied Numerical Methods',3,NULL);
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('ICE401','VLSI Circuit Design',4,NULL);
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('ICE439','Engineering Ethics',3,NULL);
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('ICE441','Wireless and Mobile Communications',3,NULL);
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('ICE444','Telecommunication Networks and Switching',3,NULL);
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('ICE448','Information Theory and Coding',3,NULL);
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('ETE225','Introduction to Control Systems',4,NULL);
+
+INSERT INTO COURSE (course_code, course_title, credits, course_type) 
+VALUES ('ETE319','Electronic Properties of Materials',3,NULL);
