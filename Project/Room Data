@@ -1,0 +1,214 @@
+--lab---
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('ICS LAB','Lab');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('Database Lab','Lab');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AI Lab','Lab');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('Software Engineering Lab','Lab');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('Digital System Lab','Lab');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('Electronics Lab','Lab');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('Shared Lab (ICS/SE/DB/AI)','Lab');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('Project Room','Other');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('Room I','Classroom');
+
+--main building---
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('MB-101','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('MB-102','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('MB-201','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('MB-202','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('MB-301','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('MB-302','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('MB-401','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('MB-402','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('MB-501','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('MB-502','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('MB-601','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('MB-701','Classroom');
+
+---AB1 building---
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB1-101','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB1-102','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB1-103','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB1-201','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB1-202','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB1-203','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB1-301','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB1-302','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB1-305','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB1-401','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB1-402','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB1-501','Classroom');
+
+--AB2 building--
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB2-101','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB2-102','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB2-103','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB2-201','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB2-202','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB2-203','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB2-301','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB2-302','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB2-401','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB2-402','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB2-501','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB2-601','Classroom');
+
+--AB3 building--
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB3-101','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB3-102','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB3-201','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB3-202','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB3-303','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB3-304','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB3-401','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB3-402','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB3-501','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB3-601','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB3-1001','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('AB3-1003','Classroom');
+
+--FUB---
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('FUB-101','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('FUB-102','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('FUB-201','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('FUB-202','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('FUB-301','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('FUB-302','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('FUB-401','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('FUB-402','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('FUB-501','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('FUB-601','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('FUB-701','Classroom');
+
+INSERT INTO ROOM (room_name, room_type) 
+VALUES ('FUB-1001','Classroom');
