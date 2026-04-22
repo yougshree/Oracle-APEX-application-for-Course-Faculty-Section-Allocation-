@@ -1,7 +1,7 @@
 1) FACULTY Table
 CREATE TABLE FACULTY (
   faculty_id  NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  initials    VARCHAR2(10)  NOT NULL UNIQUE,
+  initials    VARCHAR2(10)  NOT NULL,
   full_name   VARCHAR2(100) NOT NULL,
   designation VARCHAR2(50),
   email       VARCHAR2(100)
