@@ -1,3 +1,4 @@
+There are two triggers:
 1) Max 11 credits per faculty
 CREATE OR REPLACE TRIGGER trg_max_credits
 BEFORE INSERT OR UPDATE ON SECTION
