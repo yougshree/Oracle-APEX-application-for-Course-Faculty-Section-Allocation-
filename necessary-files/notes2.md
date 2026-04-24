@@ -1,7 +1,6 @@
 Parameterized Reports:
 - Faculty-wise Routine (Page 14)
-- Course-wise Routine (Page 8)
-- Room-wise Routine (Page 9)
+
 <h2>Page 14 — Faculty-wise Routine</h2>
 Step 1: Create Page
 Go to App Builder → Create Page<br>
