@@ -8,24 +8,25 @@ Choose: Report → Interactive Report<br>
 Page Number: 14<br>
 Page Name: Faculty-wise Routine <br>
 SQL Query:
-SELECT <br>
-    f.full_name AS "Faculty Name",<br>
-    f.initials  AS "Initials",<br>
-    c.course_code AS "Course Code",<br>
-    c.course_title AS "Course Title",<br>
-    c.credits  AS "Credits",<br>
-    s.section_no AS "Section No",<br>
-    t.start_time AS "Start Time",<br>
-    t.end_time AS "End Time",<br>
-    t.day_combo  AS "Days",<br>
-    r.room_name AS "Room"<br>
-FROM SECTION s<br>
-JOIN FACULTY f ON s.faculty_id = f.faculty_id<br>
-JOIN COURSE c ON s.course_id  = c.course_id<br>
-JOIN TIME_SLOT t ON s.slot_id   = t.slot_id<br>
-JOIN ROOM r ON s.room_id    = r.room_id<br>
-WHERE f.initials = :P14_FACULTY<br>
-ORDER BY c.course_code, s.section_no<br>
+SELECT 
+    f.full_name AS "Faculty Name",
+    f.initials  AS "Initials",
+    c.course_code AS "Course Code",
+    c.course_title  AS "Course Title",
+    c.credits AS "Credits",
+    s.section_no AS "Section No",
+    s.section_type AS "Type",
+    t.start_time AS "Start Time",
+    t.end_time AS "End Time",
+    t.day_combo AS "Days",
+    r.room_name  AS "Room"
+FROM SECTION s
+JOIN FACULTY f ON s.faculty_id = f.faculty_id
+JOIN COURSE c  ON s.course_id = c.course_id
+JOIN TIME_SLOT t ON s.slot_id = t.slot_id
+JOIN ROOM r ON s.room_id = r.room_id
+WHERE f.initials = :P7_FACULTY
+ORDER BY c.course_code, s.section_type, s.section_no
 <h2>Create Input Parameter (Dropdown)</h2>
 In Page Designer:<br>
 Right-click Body → Create Page Item<br>
