@@ -10,23 +10,24 @@ Page Name: Course-wise Routine <br>
 SQL Query:
 ```sql
 SELECT 
-    c.course_code      AS "Course Code",
-    c.course_title     AS "Course Title",
-    c.credits          AS "Credits",
-    s.section_no       AS "Section No",
-    f.full_name        AS "Faculty Name",
-    f.initials         AS "Initials",
-    t.start_time       AS "Start Time",
-    t.end_time         AS "End Time",
-    t.day_combo        AS "Days",
-    r.room_name        AS "Room"
+    c.course_code AS "Course Code",
+    c.course_title AS "Course Title",
+    c.credits AS "Credits",
+    s.section_no AS "Section No",
+    s.section_type AS "Type",
+    f.full_name AS "Faculty Name",
+    f.initials AS "Initials",
+    t.start_time  AS "Start Time",
+    t.end_time AS "End Time",
+    t.day_combo AS "Days",
+    r.room_name AS "Room"
 FROM SECTION s
-JOIN COURSE c    ON s.course_id  = c.course_id
-JOIN FACULTY f   ON s.faculty_id = f.faculty_id
-JOIN TIME_SLOT t ON s.slot_id    = t.slot_id
-JOIN ROOM r      ON s.room_id    = r.room_id
-WHERE c.course_code = :P15_COURSE
-ORDER BY s.section_no
+JOIN COURSE c  ON s.course_id = c.course_id
+JOIN FACULTY f ON s.faculty_id = f.faculty_id
+JOIN TIME_SLOT t ON s.slot_id = t.slot_id
+JOIN ROOM r ON s.room_id = r.room_id
+WHERE c.course_code = :P8_COURSE
+ORDER BY s.section_no, s.section_type
 <h2>Create Input Parameter (Dropdown)</h2>
 In Page Designer:<br>
 Right-click Body → Create Page Item<br>
