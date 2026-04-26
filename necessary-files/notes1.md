@@ -120,11 +120,3 @@ Dynamic **Faculty-wise Routine Report** where:
   * Room-wise Routine
 
 ---
-
-## 🚀 Status
-
-✔ Interactive filtering implemented
-✔ Clean UI with dropdown
-✔ Fully dynamic report
-
----
