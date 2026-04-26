@@ -1,0 +1,12 @@
+SQL Query
+SELECT 
+    s.section_id,
+    s.course_id,
+    s.section_no,
+    s.section_type,
+    s.faculty_id,
+    s.slot_id,
+    s.room_id,
+    s.semester
+FROM SECTION s
+WHERE s.course_id = :P10_COURSE_ID
