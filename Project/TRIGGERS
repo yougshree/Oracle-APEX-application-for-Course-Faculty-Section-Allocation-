@@ -1,47 +1,71 @@
 There are two triggers:
-1) Max 11 credits per faculty
-CREATE OR REPLACE TRIGGER trg_max_credits
+1) CREATE OR REPLACE TRIGGER trg_max_credits
 BEFORE INSERT OR UPDATE ON SECTION
 FOR EACH ROW
 DECLARE
-  v_total NUMBER;
+  v_total  NUMBER := 0;
+  v_new_cr NUMBER := 0;
 BEGIN
   IF :NEW.faculty_id IS NOT NULL THEN
+    -- Get total credits already assigned to this faculty
     SELECT NVL(SUM(c.credits), 0)
     INTO v_total
-    FROM SECTION s JOIN COURSE c ON s.course_id = c.course_id
-    WHERE s.faculty_id = :NEW.faculty_id
-      AND s.semester   = :NEW.semester
+    FROM SECTION s
+    JOIN COURSE c ON s.course_id = c.course_id
+    WHERE s.faculty_id  = :NEW.faculty_id
+      AND s.semester    = :NEW.semester
       AND s.section_id != NVL(:NEW.section_id, -1);
 
-    SELECT v_total + c2.credits INTO v_total
-    FROM COURSE c2 WHERE c2.course_id = :NEW.course_id;
+    -- Get credits of new course being assigned
+    SELECT NVL(credits, 0)
+    INTO v_new_cr
+    FROM COURSE
+    WHERE course_id = :NEW.course_id;
 
-    IF v_total > 11 THEN
+    IF v_total + v_new_cr > 11 THEN
       RAISE_APPLICATION_ERROR(-20001,
-        'Credit limit exceeded: max 11 credits per faculty.');
+        'CREDIT LIMIT: Faculty already has ' || v_total ||
+        ' credits. Adding ' || v_new_cr ||
+        ' would exceed the 11 credit limit!');
     END IF;
   END IF;
 END;
 /
-2) No same time slot clash 
+<h1>2) No same time slot clash </h1>
 CREATE OR REPLACE TRIGGER trg_no_slot_clash
 BEFORE INSERT OR UPDATE ON SECTION
 FOR EACH ROW
 DECLARE
-  v_count NUMBER;
+  v_faculty_clash NUMBER := 0;
+  v_room_clash    NUMBER := 0;
 BEGIN
+  -- Check 1: Same faculty same slot
   IF :NEW.faculty_id IS NOT NULL AND :NEW.slot_id IS NOT NULL THEN
-    SELECT COUNT(*) INTO v_count
+    SELECT COUNT(*) INTO v_faculty_clash
     FROM SECTION
     WHERE faculty_id = :NEW.faculty_id
       AND slot_id    = :NEW.slot_id
       AND semester   = :NEW.semester
       AND section_id != NVL(:NEW.section_id, -1);
 
-    IF v_count > 0 THEN
+    IF v_faculty_clash > 0 THEN
       RAISE_APPLICATION_ERROR(-20002,
-        'Time slot clash: faculty already assigned in this slot.');
+        'CLASH ERROR: This faculty already has a class in this time slot!');
+    END IF;
+  END IF;
+
+  -- Check 2: Same room same slot
+  IF :NEW.room_id IS NOT NULL AND :NEW.slot_id IS NOT NULL THEN
+    SELECT COUNT(*) INTO v_room_clash
+    FROM SECTION
+    WHERE room_id  = :NEW.room_id
+      AND slot_id  = :NEW.slot_id
+      AND semester = :NEW.semester
+      AND section_id != NVL(:NEW.section_id, -1);
+
+    IF v_room_clash > 0 THEN
+      RAISE_APPLICATION_ERROR(-20003,
+        'CLASH ERROR: This room is already booked in this time slot!');
     END IF;
   END IF;
 END;
