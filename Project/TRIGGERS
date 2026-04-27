@@ -1,32 +1,28 @@
 There are two triggers:
 1) CREATE OR REPLACE TRIGGER trg_max_credits
+CREATE OR REPLACE TRIGGER trg_max_credits
 BEFORE INSERT OR UPDATE ON SECTION
 FOR EACH ROW
 DECLARE
-  v_total  NUMBER := 0;
-  v_new_cr NUMBER := 0;
+  v_total NUMBER;
+  v_credit NUMBER;
 BEGIN
   IF :NEW.faculty_id IS NOT NULL THEN
-    -- Get total credits already assigned to this faculty
-    SELECT NVL(SUM(c.credits), 0)
+    SELECT NVL(SUM(
+      CASE s.section_type
+        WHEN 'Theory' THEN c.credits * 0.75
+        WHEN 'Lab'    THEN c.credits * 0.25
+        ELSE c.credits
+      END), 0)
     INTO v_total
-    FROM SECTION s
-    JOIN COURSE c ON s.course_id = c.course_id
-    WHERE s.faculty_id  = :NEW.faculty_id
-      AND s.semester    = :NEW.semester
+    FROM SECTION s JOIN COURSE c ON s.course_id = c.course_id
+    WHERE s.faculty_id = :NEW.faculty_id
+      AND s.semester = :NEW.semester
       AND s.section_id != NVL(:NEW.section_id, -1);
 
-    -- Get credits of new course being assigned
-    SELECT NVL(credits, 0)
-    INTO v_new_cr
-    FROM COURSE
-    WHERE course_id = :NEW.course_id;
-
-    IF v_total + v_new_cr > 11 THEN
+    IF v_total > 11 THEN
       RAISE_APPLICATION_ERROR(-20001,
-        'CREDIT LIMIT: Faculty already has ' || v_total ||
-        ' credits. Adding ' || v_new_cr ||
-        ' would exceed the 11 credit limit!');
+        'Credit limit exceeded: max 11 credits per faculty.');
     END IF;
   END IF;
 END;
